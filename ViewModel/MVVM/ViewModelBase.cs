@@ -16,7 +16,7 @@ namespace ShakeNTouch.ViewModel.MVVM
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(nomPropriete));
-        }
+        } 
 
         public bool NotifyPropertyChanged<T>(ref T variable, T valeur, [CallerMemberName] string nomPropriete = null)
         {

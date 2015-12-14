@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShakeNTouch.View;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -94,7 +95,7 @@ namespace ShakeNTouch
                 // Quand la pile de navigation n'est pas restaurée, accédez à la première page,
                 // puis configurez la nouvelle page en transmettant les informations requises en tant que
                 // paramètre
-                if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
+                if (!rootFrame.Navigate(typeof(Acceuil), e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }

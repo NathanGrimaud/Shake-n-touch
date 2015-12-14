@@ -9,6 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button x:Name="Viber_button" Content="VIBER !" HorizontalAlignment="Left" Margin="281,553,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="viber_state" HorizontalAlignment="Left" Margin="281,528,0,0" TextWrapping="Wrap" Text="Not vibring" VerticalAlignment="Top" Height="30" Width="109"/>
+       
+        <TextBlock x:Name="xstate" HorizontalAlignment="Left" Margin="48,508,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30"/>
+        <TextBlock x:Name="ystate" HorizontalAlignment="Left" Margin="48,538,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30"/>
+        <TextBlock x:Name="zstate" HorizontalAlignment="Left" Margin="48,568,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30"/>
+        <TextBlock x:Name="accZ" HorizontalAlignment="Left" Margin="10,568,0,0" TextWrapping="Wrap" Text="z:" VerticalAlignment="Top" Height="30" Width="38"/>
+        <TextBlock x:Name="accY" HorizontalAlignment="Left" Margin="10,538,0,0" TextWrapping="Wrap" Text="y:" VerticalAlignment="Top" Height="30" Width="38"/>
+        <TextBlock x:Name="accX" HorizontalAlignment="Left" Margin="10,508,0,0" TextWrapping="Wrap" Text="x:" VerticalAlignment="Top" Height="30" Width="38"/>
 
     </Grid>
 </Page>

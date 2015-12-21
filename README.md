@@ -12,7 +12,6 @@ Projet Windows Phone
 -> Faire changer le fond d'écran de couleur à chaque tick (voir le projet tetris) 
 -> Faire des Levels (en fonction du score) 
 -> Faire une page d'acceuil (les PSD seronts ajoutés)
--> 
 
 ## Commentaires 
 

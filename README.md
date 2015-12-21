@@ -29,7 +29,7 @@ Projet Windows Phone
             this.InitializeComponent();
             DispatcherAcceuil = Dispatcher;
         }
-</code
+</code>
 
 
 

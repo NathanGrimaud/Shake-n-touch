@@ -23,12 +23,12 @@ Projet Windows Phone
 ## Commentaires 
 
  * N'oubliez pas dans le simulateurs d'utiliser la fonction "shake" dans données enregistrés. Sinon c'est quasi impossible de tester l'appli
- * Il y a une chose dans le .xaml.cs, nécessaire à la récupération des données de l'accéléromètre : <code> public static CoreDispatcher DispatcherAcceuil;
-        public Acceuil()
-        {
-            this.InitializeComponent();
-            DispatcherAcceuil = Dispatcher;
-        }
+ * Il y a une chose dans le .xaml.cs, nécessaire à la récupération des données de l'accéléromètre : <code> public static CoreDispatcher DispatcherAcceuil;  
+        public Acceuil()  
+        {  
+            this.InitializeComponent();  
+            DispatcherAcceuil = Dispatcher;  
+        }  
 </code>
 
 

@@ -88,6 +88,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Accelerometer.cs" />
     <Compile Include="Model\Partie.cs" />
     <Compile Include="Model\ServicePartie.cs" />
     <Compile Include="Model\Tour.cs" />
@@ -97,8 +98,8 @@
     <Compile Include="ViewModel\MVVM\RelayCommandWithParam.cs" />
     <Compile Include="ViewModel\MVVM\ViewModelBase.cs" />
     <Compile Include="ViewModel\PartieViewModel.cs" />
-    <Compile Include="View\Acceuil.xaml.cs">
-      <DependentUpon>Acceuil.xaml</DependentUpon>
+    <Compile Include="View\Partie.xaml.cs">
+      <DependentUpon>Partie.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +124,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Acceuil.xaml">
+    <Page Include="View\Partie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

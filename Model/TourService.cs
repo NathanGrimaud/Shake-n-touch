@@ -11,13 +11,16 @@ namespace ShakeNTouch.Model
         public Random alea = new Random();
         public Tour newTour()
         {
-            Tour encours = new Tour(){
-                X = alea.Next(0, 200),
-                Y = alea.Next(0, 200),
-                time = alea.Next(0, 1000)
+            Tour encours = new Tour() {
+                X = alea.Next(0, 490),
+                Y = alea.Next(0, 283),
+                time = alea.Next(3000, 30000),
+                timeshow = alea.Next(1000, 3000)
             };
 
             return encours;
         }
+
+
     }
 }

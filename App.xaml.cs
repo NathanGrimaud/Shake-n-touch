@@ -8,6 +8,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.SpeechRecognition;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -16,7 +18,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
-
 // Pour plus d'informations sur le modèle Application vide, consultez la page http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace ShakeNTouch
@@ -27,7 +28,6 @@ namespace ShakeNTouch
     public sealed partial class App : Application
     {
         private TransitionCollection transitions;
-
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
         /// à être exécutée. Elle correspond donc à l'équivalent logique de main() ou WinMain().
@@ -35,6 +35,7 @@ namespace ShakeNTouch
         public App()
         {
             this.InitializeComponent();
+            SetupVoice();
             this.Suspending += this.OnSuspending;
         }
 
@@ -44,6 +45,29 @@ namespace ShakeNTouch
         /// des résultats de recherche, etc.
         /// </summary>
         /// <param name="e">Détails concernant la requête et le processus de lancement.</param>
+        /// 
+        public async void SetupVoice()
+        {
+            try
+            {
+                Uri vcdUri = new Uri("ms-appx:///VoiceCommand.xml", UriKind.Absolute);
+
+                //load the VCD file from local storage 
+                StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(vcdUri);
+
+                //register the voice command definitions        
+                await VoiceCommandManager.InstallCommandSetsFromStorageFileAsync(file);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+                //voice command file not found or language not supported or file is 
+                //invalid format (missing stuff), or capabilities not selected, etc etc
+            }
+
+
+        }
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
@@ -131,5 +155,6 @@ namespace ShakeNTouch
             // TODO: enregistrez l'état de l'application et arrêtez toute activité en arrière-plan
             deferral.Complete();
         }
+
     }
 }

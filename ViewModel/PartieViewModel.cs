@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.Phone.Devices.Notification;
 using Windows.UI.Xaml;
 
 namespace ShakeNTouch.ViewModel
@@ -79,6 +80,8 @@ namespace ShakeNTouch.ViewModel
 
         #endregion
 
+
+
         #region Private Methode
 
         // Un tour correspond à un push du go. La partie elle ne fait que comptabilisé les score
@@ -91,6 +94,9 @@ namespace ShakeNTouch.ViewModel
             this.Score = "Score :" + partieencours.score;
 
             // Ici faire vibrer le vibreur jusqu'a finshake
+
+            VibrationDevice viber = VibrationDevice.GetDefault();
+            viber.Vibrate(TimeSpan.FromMilliseconds(tourencours.time));
 
             // Ici, il est demander à l'utilisateur de shake le téléphone jusqu'a finshake. Si l'utilisateur à bien réagi, il se retrouve dans la fonction continuerpartie(). Sinon finpartie()
             shaker(finshake);

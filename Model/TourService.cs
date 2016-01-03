@@ -14,8 +14,8 @@ namespace ShakeNTouch.Model
             Tour encours = new Tour() {
                 X = alea.Next(0, 490),
                 Y = alea.Next(0, 283),
-                time = alea.Next(3000, 30000),
-                timeshow = alea.Next(1000, 3000)
+                time = alea.Next(500,5000),//temps de vibration
+                timeshow = alea.Next(1000, 3000)//temps pour appuyer
             };
 
             return encours;

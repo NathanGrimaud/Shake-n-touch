@@ -12,7 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Windows.Media.SpeechRecognition;
+using Windows.Phone.System;
+using Windows.Storage;
 // Pour en savoir plus sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace ShakeNTouch
@@ -28,6 +30,7 @@ namespace ShakeNTouch
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
+       
 
         /// <summary>
         /// Invoqué lorsque cette page est sur le point d'être affichée dans un frame.

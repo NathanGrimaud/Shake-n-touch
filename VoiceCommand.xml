@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <CommandSet xml:lang="fr-FR">
+    <CommandPrefix>salut</CommandPrefix>
+    <Example>ShakeAndTouch</Example>
+
+    <Command Name="start">
+      <Example>And Touch start </Example>
+      <ListenFor>[And] [Touch] start </ListenFor>
+      <Feedback> Lancement d'une nouvelle partie... </Feedback>
+      <Navigate />
+    </Command>
+	
+  </CommandSet>
+</VoiceCommands>
+
+<!-- Exemple -->
+<!--
+
+    L'exemple précédent présente un jeu fictif appelé Contoso ROD3O! qui définit deux
+    commandes qu'un utilisateur peut prononcer pour démarrer une nouvelle partie ou rejouer l'un des trois niveaux du jeu.  
+    Pour lancer la commande PlayGame, un utilisateur peut prononcer « Contoso Rodeo commencer une nouvelle partie » ou « Contoso Rodeo
+    commencer nouvelle partie ». Les deux phrases lancent une nouvelle partie. Pour lancer la deuxième commande, un utilisateur peut dire
+    « Contoso Rodeo rejouer niveau un », « Contoso Rodeo rejouer niveau deux » ou « Contoso Rodeo rejouer niveau 
+    trois ».
+    La deuxième commande montre comment utiliser PhraseList avec un élément Command. Les PhraseLists peuvent être mises à jour 
+    de manière dynamique par l'application (par ex., si un utilisateur débloque un nouveau niveau/jeu ou une nouvelle fonctionnalité, vous pouvez 
+    l'autoriser à fournir les commandes des nouvelles fonctionnalités après l'enregistrement des commandes vocales.)
+    La troisième commande montre comment la séquence {*} peut s'exécuter parallèlement à une autre commande pour reconnaître du texte
+    qui n'est pas défini dans CommandSet.
+
+  Remarque :
+
+      [et] Indique que « et » est facultatif. L'utilisation de mots de liaison comme celui-ci
+            peut contribuer à rendre la prononciation de « Contoso Rodeo, jouer nouvelle partie » et « ouvrir Contoso Rodeo et jouer
+            une nouvelle partie » plus naturelle.
+                 
+      {number} Défini distinctement de Command, mappage à « un » ou « deux » ou « trois ».
+
+-->
